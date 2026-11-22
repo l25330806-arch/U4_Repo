@@ -9,8 +9,6 @@ La función devuelve **dos** cosas: el valor interpolado y el error. El error es
 from ejercicios.interpolacion.error_estimado_interpolacion import (
     error_estimado_interpolacion,
 )
-
-
 def interpolacion_lineal(x0, y0, x1, y1, x, x2=None, y2=None):
     """Devuelve ``(y, error)``.
 
@@ -21,12 +19,12 @@ def interpolacion_lineal(x0, y0, x1, y1, x, x2=None, y2=None):
     x2, y2 son OPCIONALES: puedes terminar el método sin usarlos y, cuando
     escribas ``error_estimado_interpolacion``, regresar aquí y activarlos.
     """
-    def interpolacion_lineal(x0, y0, x1, y1, x, x2=None, y2=None):
-    """ ...tu docstring tal cual... """
     m = (y1 - y0) / (x1 - x0)
     y = y0 + m * (x - x0)
     error = None
     return y, error
+
+
 if __name__ == "__main__":
     # sin tercer dato: f(1)=0, f(4)=3  ->  (1.0, None)
     print(interpolacion_lineal(1, 0, 4, 3, 2))
