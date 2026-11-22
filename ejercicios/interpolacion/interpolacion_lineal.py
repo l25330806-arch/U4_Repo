@@ -23,8 +23,12 @@ def interpolacion_lineal(x0, y0, x1, y1, x, x2=None, y2=None):
     """
     # error = None
     # return y, error
-    raise NotImplementedError("Completa interpolacion_lineal")
+    
+def interpolacion_lineal(x, x0, y0, x1, y1):
+    m = (y1 - y0) / (x1 - x0)
+    return y0 + m * (x - x0)
 
+print(f"{interpolacion_lineal(3, 2, 4, 5, 10):.4f}")  # 6.0000
 
 if __name__ == "__main__":
     # sin tercer dato: f(1)=0, f(4)=3  ->  (1.0, None)
